@@ -1,8 +1,4 @@
-/* Reset CSS */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 html,
 body,
@@ -133,4 +129,189 @@ q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+
+
+:root {
+
+    --white: #FFF;
+    --black: #000;
+
+    --dark-blue-100: #609ED4;
+    --dark-blue-200: #356EA9;
+    --darl-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
+
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
+    --light-blue-500: #757FB2;
+
+    --gray-100: #CED4DA;
+    --gray-200: #ADB5BD;
+    --gray-300: #868E96;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+
+    --font: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: var(--font);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-blue-300);
+    color: var(--dark-blue-400);
+    font-family: var(--font);
+}
+
+.header-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.header__logo__img {
+    width: 6.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+    margin-left: 3%;
+}
+
+.container__input__text {
+    width: 100%;
+}
+
+.insert__text {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    left: 10%;
+    top: 15%;
+    font-weight: normal;
+    font-size: 2rem;
+    background-color: var(--light-blue-300);
+    border: none;
+}
+
+.insert__text::placeholder {
+    color: var(--dark-blue-400);
+}
+
+.insert__text:focus,
+.insert__text:active {
+    border: none;
+    outline: none;
+}
+
+.attention__message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline-start: 0;
+    gap: 0.5rem;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 80%;
+}
+
+.attention__message p {
+    font-weight: 400;
+    font-size: 0.8rem;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.container__button {
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 80%;
+    font-size: 1.5rem;
+    gap: 2%;
+}
+
+.encrypt__button {
+    font-size: 1.3rem;
+    background-color: var(--dark-blue-400);
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 25%;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: none;
+}
+
+.decrypt__button {
+    color: var(--dark-blue-400);
+    font-size: 1.3rem;
+    background-color: var(--gray-100);
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 25%;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: none;
+}
+
+.encrypt__button:hover,
+.decrypt__button:hover {
+    cursor: pointer;
+}
+
+.container__side__interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 6.5%;
+    background-color: var(--white);
+    border-radius: 2rem;
+}
+
+.interaction_character {
+    width: 50%;
+}
+
+.container__side__messages {
+    color: var(--gray-500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.container__side__messages h2 {
+    width: 60%;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
 }

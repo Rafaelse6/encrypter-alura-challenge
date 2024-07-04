@@ -6,5 +6,51 @@
     <title>Encryptor Challenge</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header__logo">
+        <img
+          src="./assets/logo.png"
+          class="header__logo__img"
+          alt="Logo Alura"
+        />
+        <!-- Input text -->
+        <div class="container__input__text">
+          <textarea
+            cols="30"
+            rows="30"
+            class="insert__text"
+            placeholder="Digite seu texto"
+          ></textarea>
+
+          <!-- Attention -->
+          <div class="attention__message">
+            Apenas letras minúsculas e sem acento.
+          </div>
+
+          <!-- Encrypt/Decrypt buttons -->
+          <div class="container__button">
+            <button class="encrypt__button" onclick="">Criptografar</button>
+            <button class="decrypt__button" onclick="">Descriptografar</button>
+          </div>
+
+          <!-- Side interaction -->
+          <div class="container__side__interaction">
+            <img
+              src="./assets/character.png"
+              class="interaction_character"
+              alt="Imagem de um personagem olhando um diamante através de uma lupa"
+            />
+            <div class="container__side__messages">
+              <h2 class="title__message">Nenhuma messagem foi encontrada</h2>
+              <p>
+                Digite um texto que você deseja criptografar ou descriptografar
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
 </html>

@@ -89,7 +89,6 @@ video {
     vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -106,6 +105,7 @@ section {
 
 body {
     line-height: 1;
+    font-family: 'Montserrat', sans-serif;
 }
 
 ol,
@@ -123,7 +123,6 @@ blockquote:after,
 q:before,
 q:after {
     content: '';
-    content: none;
 }
 
 table {
@@ -131,16 +130,13 @@ table {
     border-spacing: 0;
 }
 
-
-
 :root {
-
     --white: #FFF;
     --black: #000;
 
     --dark-blue-100: #609ED4;
     --dark-blue-200: #356EA9;
-    --darl-blue-300: #0A3871;
+    --dark-blue-300: #0A3871;
     --dark-blue-400: #072B61;
     --dark-blue-500: #052051;
 
@@ -168,7 +164,6 @@ table {
     height: 100vh;
     background-color: var(--light-blue-300);
     color: var(--dark-blue-400);
-    font-family: var(--font);
 }
 
 .header-logo {
@@ -203,6 +198,7 @@ table {
     font-size: 2rem;
     background-color: var(--light-blue-300);
     border: none;
+    color: var(--dark-blue-400);
 }
 
 .insert__text::placeholder {
@@ -219,20 +215,29 @@ table {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-inline-start: 0;
     gap: 0.5rem;
     position: absolute;
     width: 80%;
     left: 10%;
-    top: 80%;
+    top: 78%;
+}
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--gray-400);
+    color: var(--white);
+
+    font-weight: bold;
 }
 
 .attention__message p {
     font-weight: 400;
     font-size: 0.8rem;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
 
 .container__button {
@@ -248,10 +253,9 @@ table {
     gap: 2%;
 }
 
-.encrypt__button {
+.encrypt__button,
+.decrypt__button {
     font-size: 1.3rem;
-    background-color: var(--dark-blue-400);
-    color: var(--white);
     align-items: center;
     justify-content: center;
     padding: 2%;
@@ -261,17 +265,16 @@ table {
     border: none;
 }
 
+.encrypt__button {
+    background-color: var(--dark-blue-400);
+    color: var(--white);
+}
+
 .decrypt__button {
     color: var(--dark-blue-400);
-    font-size: 1.3rem;
-    background-color: var(--gray-100);
-    align-items: center;
-    justify-content: center;
-    padding: 2%;
-    width: 25%;
-    border-radius: 1.5rem;
-    text-align: center;
-    border: none;
+    background-color: transparent;
+    background-color: transparent;
+    border: 1px solid var(--dark-blue-400);
 }
 
 .encrypt__button:hover,
@@ -313,5 +316,4 @@ table {
     width: 60%;
     font-weight: 700;
     font-size: 1.25rem;
-    text-align: center;
 }

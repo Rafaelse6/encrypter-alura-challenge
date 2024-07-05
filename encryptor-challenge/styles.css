@@ -305,11 +305,15 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 1%;
     gap: 1rem;
     width: 100%;
     text-align: center;
+}
+
+.text-content {
+    width: 100%;
 }
 
 .container__side__messages h2 {

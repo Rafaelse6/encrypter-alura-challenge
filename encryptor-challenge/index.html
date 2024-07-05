@@ -19,6 +19,7 @@
       <!-- Input text -->
       <div class="container__input__text">
         <textarea
+          id="inputText"
           cols="30"
           rows="30"
           class="insert__text"
@@ -33,8 +34,12 @@
 
       <!-- Encrypt/Decrypt buttons -->
       <div class="container__button">
-        <button class="encrypt__button" onclick="">Criptografar</button>
-        <button class="decrypt__button" onclick="">Descriptografar</button>
+        <button class="encrypt__button" onclick="encryptText()">
+          Criptografar
+        </button>
+        <button class="decrypt__button" onclick="decryptText()">
+          Descriptografar
+        </button>
       </div>
 
       <!-- Side interaction -->
@@ -45,12 +50,13 @@
           alt="Imagem de um personagem olhando um diamante através de uma lupa"
         />
         <div class="container__side__messages">
-          <h2>Nenhuma messagem foi encontrada</h2>
+          <h2>Nenhuma mensagem foi encontrada</h2>
           <p class="side_message">
             Digite um texto que você deseja criptografar ou descriptografar
           </p>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
